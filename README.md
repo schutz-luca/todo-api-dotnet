@@ -55,6 +55,21 @@ TodoApi/
 
 ---
 
+## 🧰 Prerequisites
+
+Before running this project, make sure you have:
+
+- [.NET SDK 8.0+](https://dotnet.microsoft.com/en-us/download)
+- [PostgreSQL 14+](https://www.postgresql.org/download/)
+- [Visual Studio Code](https://code.visualstudio.com/) or [Visual Studio 2022](https://visualstudio.microsoft.com/)
+- (Optional) [Docker](https://www.docker.com/) if you prefer to run PostgreSQL in a container
+- Entity Framework Core tools:
+  ```bash
+  dotnet tool install --global dotnet-ef
+  ```
+
+ ___
+
 ## ⚙️ Setup & Installation
 
 ### 1. Clone the repository
@@ -66,11 +81,7 @@ cd todo-api-dotnet
 
 ### 2. Create configuration file
 
-Copy the example file and edit it with your local credentials:
-
-```bash
-cp appsettings.example.json appsettings.Development.json
-```
+Copy the example file, rename to `appsettings.json` and edit it with your local credentials:
 
 Example:
 
