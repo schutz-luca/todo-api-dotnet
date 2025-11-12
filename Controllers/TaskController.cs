@@ -1,9 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using ToDoApi.Data;
 using ToDoApi.Models;
 using ToDoAPI.Interfaces;
-using ToDoAPI.Services;
+using TodoApi.DTOs;
 
 namespace ToDoApi.Controllers
 {
@@ -18,7 +16,7 @@ namespace ToDoApi.Controllers
 			_taskService = taskService;
 		}
 
-        // GET: api/Tasks
+        // GET: api/tasks
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TaskModel>>> GetTasks()
         {
@@ -26,7 +24,7 @@ namespace ToDoApi.Controllers
 			return Ok(tasks);
 		}
 
-        // GET: api/Tasks/{id}
+        // GET: api/tasks/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<TaskModel>> GetTaskById(int id)
         {
@@ -35,15 +33,25 @@ namespace ToDoApi.Controllers
 			return Ok(task);
 		}
 
-		// POST: api/Tasks
+		// POST: api/tasks
         [HttpPost]
-        public async Task<ActionResult<TaskModel>> PostTask(TaskModel task)
+        public async Task<ActionResult<TaskModel>> PostTask([FromBody] TaskCreateDto task)
         {
 			var created = await _taskService.CreateTaskAsync(task);
 			return CreatedAtAction(nameof(GetTaskById), new { id = created.Id }, created);
 		}
 
-		// DELETE: api/Tasks/{id}
+		// PUT: api/tasks/{id}
+		[HttpPut("{id}")]
+		public async Task<IActionResult> UpdateTask(int id, TaskUpdateDto updatedTask)
+		{
+			var updated = await _taskService.UpdateTaskAsync(id, updatedTask);
+			if (!updated) return NotFound();
+
+			return NoContent();
+		}
+
+		// DELETE: api/tasks/{id}
 		[HttpDelete("{id}")]
 		public async Task<IActionResult> DeleteTask(int id)
 		{
