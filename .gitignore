@@ -1,0 +1,91 @@
+﻿# Build results
+bin/
+obj/
+out/
+Debug/
+Release/
+[Bb]uild/
+[Ll]ogs/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+.history/
+*.code-workspace
+
+# Rider / JetBrains
+.idea/
+
+# ASP.NET Core
+wwwroot/dist/
+wwwroot/lib/
+appsettings.json
+appsettings.*.local.json
+appsettings.Development.json
+appsettings.*.secrets.json
+
+# Sensitive configuration
+secrets.json
+*.pfx
+*.cer
+*.pem
+*.key
+
+# Entity Framework migrations cache
+Migrations/obj/
+
+# Environment files
+.env
+.env.*
+
+# Database
+*.db
+*.sqlite
+*.bak
+*.sql
+
+# Docker
+docker-compose.override.yml
+.docker/
+Dockerfile.*
+
+# Node modules (if you’re serving frontend assets)
+node_modules/
+
+# System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+
+# Windows
+*.lnk
+
+# ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# Tests
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Logs and temp
+*.log
+logs/
+tmp/
+temp/
+
+# Tooling
+ncrunch*
+.vs/
