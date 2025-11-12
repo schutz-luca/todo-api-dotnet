@@ -26,7 +26,7 @@ The API manages tasks (ToDos) and connects to a **PostgreSQL** database, exposin
 - **ASP.NET Core 8**
 - **Entity Framework Core**
 - **PostgreSQL**
-- **Swagger / Swashbuckle**
+- **Swagger**
 - **CORS**
 - **Visual Studio / VS Code compatible**
 
@@ -60,8 +60,8 @@ TodoApi/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/todo-api.git
-cd todo-api
+git clone https://github.com/yourusername/todo-api-dotnet.git
+cd todo-api-dotnet
 ```
 
 ### 2. Create configuration file
@@ -109,8 +109,7 @@ dotnet run
 
 By default, the API runs at:
 
-- **HTTP:** `http://localhost:5000`
-- **HTTPS:** `https://localhost:5001`
+- **HTTPS:** `https://localhost:7008`
 
 ---
 
@@ -131,20 +130,10 @@ By default, the API runs at:
 Once the API is running, open your browser and go to:
 
 ```
-https://localhost:5001/swagger
+https://localhost:7008/swagger
 ```
 
 This page provides an interactive documentation where you can test all endpoints.
-
-### ▶️ Using Insomnia / Postman
-
-If you get an SSL error (e.g. “SSL peer certificate was not OK”), either:
-- Disable certificate validation in Insomnia, or  
-- Run your API via HTTP (`http://localhost:5000`), or  
-- Trust the dev certificate:
-  ```bash
-  dotnet dev-certs https --trust
-  ```
 
 ---
 
@@ -163,8 +152,7 @@ If you get an SSL error (e.g. “SSL peer certificate was not OK”), either:
 ## 🧑‍💻 Author
 
 **Luca Schutzenhofer**  
-Software Engineer & Architect — JavaScript & .NET ecosystems  
-Passionate about knowledge, philosophy, and science.
+Software Engineer, Sr. Full‑Stack Developer, Frontend Expert
 
 ---
 
