@@ -1,7 +1,8 @@
-# 🧾 ToDo List API (ASP.NET Core + PostgreSQL)
+# 🧾 ToDo List - API (ASP.NET Core + PostgreSQL)
 
 A simple RESTful API built with **ASP.NET Core**, following market best practices and clean architecture principles.  
 The API manages tasks (ToDos) and connects to a **PostgreSQL** database, exposing endpoints for creating, listing, retrieving, and deleting tasks.
+It was created to integrate with **[ToDo List - WebApp (Angular)](https://github.com/schutz-luca/todo-webapp-angular)** as frontend.
 
 ---
 
@@ -32,7 +33,7 @@ The API manages tasks (ToDos) and connects to a **PostgreSQL** database, exposin
 
 ---
 
-## 📁 Project Structure
+## 📁 Folder Structure
 
 ```bash
 TodoApi/
@@ -160,13 +161,11 @@ This page provides an interactive documentation where you can test all endpoints
 
 ---
 
-## 🧑‍💻 Author
-
-**Luca Schutzenhofer**  
-Software Engineer, Sr. Full‑Stack Developer, Frontend Expert
-
----
-
 ## 🪪 License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+**Luca Schutzenhofer**  
+Software Engineer, Sr. Full‑Stack Developer, Frontend Expert
